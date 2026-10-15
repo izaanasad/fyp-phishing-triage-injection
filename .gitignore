@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.ipynb_checkpoints/
+
+# Secrets / config
+.env
+*.key
+secrets.*
+
+# Generated corpus & large data
+corpus/data/base/
+corpus/data/poisoned/
+corpus/data/clean/
+*.pdf
+*.docx
+!report/**            # allow report exhibit docs/pdfs if needed
+!evidence/**
+
+# Models / caches
+*.gguf
+*.bin
+.ollama/
+.cache/
+
+# Results (keep summaries, ignore raw dumps)
+harness/runs/
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

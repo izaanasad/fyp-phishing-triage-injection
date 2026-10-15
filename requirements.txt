@@ -1,0 +1,24 @@
+# --- document extraction ---
+pdfplumber
+pymupdf
+python-docx
+pypdfium2
+pdf2image
+pytesseract
+# --- agent / retrieval ---
+langchain
+langchain-community
+llama-index
+ollama
+chromadb
+# --- ml / analysis ---
+scikit-learn
+pandas
+numpy
+xgboost
+# --- gateway service + dashboard backend ---
+fastapi
+uvicorn
+# --- testing / dev ---
+pytest
+python-dotenv
