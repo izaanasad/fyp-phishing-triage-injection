@@ -106,7 +106,7 @@ def test_docx_generation(tmp_path: Path):
     clean_gt = json.loads((out / "clean" / "msa.docx.gt.json").read_text())
     assert clean_gt["correct_verdict"] == "benign"
     assert clean_gt["target_iocs"]  # found a URL / IP / email
-    assert (out / "manifest.json").exists()
+    assert (out / "manifests" / "msa.json").exists()  # per-base manifest
 
 
 def test_pdf_generation(tmp_path: Path):

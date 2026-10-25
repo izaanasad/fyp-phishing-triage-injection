@@ -38,6 +38,7 @@ _PIPELINE = Path(__file__).resolve().parents[1] / "pipeline"
 if str(_PIPELINE) not in sys.path:
     sys.path.insert(0, str(_PIPELINE))
 from extraction import extract  # noqa: E402
+from extraction.encoding_scan import scan as _encoding_scan  # noqa: E402
 
 _ENCODING_VECTORS = {"V7", "V8"}
 
@@ -84,18 +85,28 @@ def applicable_vectors(file_type: str) -> tuple[str, ...]:
 
 
 def _validate(vector: str, marker: str, rec) -> tuple[bool, bool, str]:
-    """Return (r1_pass, r2_pass, detail) for a poisoned variant's record."""
-    recoverable = rec.all_extractable_text + "\n" + rec.concealed_text()
+    """Return (r1_pass, r2_pass, detail) for a poisoned variant's record.
+
+    R1 ("survives extraction") is checked against everything the extraction
+    pipeline recovers via any parser — all_extractable_text (pdfplumber/docx),
+    the visible text layer (PyMuPDF), and the concealed channels — because a
+    payload the pipeline can recover by any route is one that reaches the model.
+    This matters for the PDF encoding vectors: PyMuPDF reads back embedded-font
+    Unicode that pdfplumber alone misses.
+    """
+    recoverable = "\n".join((rec.all_extractable_text, rec.visible_text, rec.concealed_text()))
     r1 = marker in recoverable
     if not r1:
         return False, False, "R1 failed: injected payload not recoverable by extraction"
 
     if vector in _ENCODING_VECTORS:
+        # scan the full recovered text, not only the pdfplumber layer
+        flags = _encoding_scan(recoverable)
         if vector == "V7":
-            r2 = rec.encoding_flags.zero_width_count > 0
+            r2 = flags.zero_width_count > 0
             detail = "" if r2 else "R2' failed: no zero-width obfuscation detected"
         else:
-            r2 = rec.encoding_flags.homoglyph_count > 0
+            r2 = flags.homoglyph_count > 0
             detail = "" if r2 else "R2' failed: no homoglyph obfuscation detected"
     else:
         r2 = marker not in rec.visible_text
@@ -203,8 +214,10 @@ def generate(base_path: str | Path, out_dir: str | Path,
                      "path": str(dest)}
                 )
 
-    # write the manifest + rejection log
-    (out / "manifest.json").write_text(
+    # write a per-base manifest (one file per base; the CLI writes the aggregate)
+    manifests = out / "manifests"
+    manifests.mkdir(exist_ok=True)
+    (manifests / f"{base.stem}.json").write_text(
         json.dumps({
             "base": str(base), "file_type": file_type,
             "accepted": report.accepted, "rejected": report.rejected,

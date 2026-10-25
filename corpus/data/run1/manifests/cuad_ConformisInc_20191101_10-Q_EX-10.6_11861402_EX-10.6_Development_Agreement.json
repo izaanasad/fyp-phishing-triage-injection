@@ -1,0 +1,22 @@
+{
+  "base": "C:\\Users\\IZWAN ASAD\\OneDrive\\Desktop\\fyp-hq\\code\\corpus\\data\\base\\cuad_ConformisInc_20191101_10-Q_EX-10.6_11861402_EX-10.6_Development_Agreement.docx",
+  "file_type": "docx",
+  "accepted": [
+    "corpus\\data\\run1\\poisoned\\cuad_ConformisInc_20191101_10-Q_EX-10.6_11861402_EX-10.6_Development_Agreement__V4_O1.docx",
+    "corpus\\data\\run1\\poisoned\\cuad_ConformisInc_20191101_10-Q_EX-10.6_11861402_EX-10.6_Development_Agreement__V4_O2.docx",
+    "corpus\\data\\run1\\poisoned\\cuad_ConformisInc_20191101_10-Q_EX-10.6_11861402_EX-10.6_Development_Agreement__V4_O3.docx",
+    "corpus\\data\\run1\\poisoned\\cuad_ConformisInc_20191101_10-Q_EX-10.6_11861402_EX-10.6_Development_Agreement__V5_O1.docx",
+    "corpus\\data\\run1\\poisoned\\cuad_ConformisInc_20191101_10-Q_EX-10.6_11861402_EX-10.6_Development_Agreement__V5_O2.docx",
+    "corpus\\data\\run1\\poisoned\\cuad_ConformisInc_20191101_10-Q_EX-10.6_11861402_EX-10.6_Development_Agreement__V5_O3.docx",
+    "corpus\\data\\run1\\poisoned\\cuad_ConformisInc_20191101_10-Q_EX-10.6_11861402_EX-10.6_Development_Agreement__V6_O1.docx",
+    "corpus\\data\\run1\\poisoned\\cuad_ConformisInc_20191101_10-Q_EX-10.6_11861402_EX-10.6_Development_Agreement__V6_O2.docx",
+    "corpus\\data\\run1\\poisoned\\cuad_ConformisInc_20191101_10-Q_EX-10.6_11861402_EX-10.6_Development_Agreement__V6_O3.docx",
+    "corpus\\data\\run1\\poisoned\\cuad_ConformisInc_20191101_10-Q_EX-10.6_11861402_EX-10.6_Development_Agreement__V7_O1.docx",
+    "corpus\\data\\run1\\poisoned\\cuad_ConformisInc_20191101_10-Q_EX-10.6_11861402_EX-10.6_Development_Agreement__V7_O2.docx",
+    "corpus\\data\\run1\\poisoned\\cuad_ConformisInc_20191101_10-Q_EX-10.6_11861402_EX-10.6_Development_Agreement__V7_O3.docx",
+    "corpus\\data\\run1\\poisoned\\cuad_ConformisInc_20191101_10-Q_EX-10.6_11861402_EX-10.6_Development_Agreement__V8_O1.docx",
+    "corpus\\data\\run1\\poisoned\\cuad_ConformisInc_20191101_10-Q_EX-10.6_11861402_EX-10.6_Development_Agreement__V8_O2.docx",
+    "corpus\\data\\run1\\poisoned\\cuad_ConformisInc_20191101_10-Q_EX-10.6_11861402_EX-10.6_Development_Agreement__V8_O3.docx"
+  ],
+  "rejected": []
+}

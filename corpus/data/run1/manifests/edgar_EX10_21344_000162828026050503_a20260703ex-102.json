@@ -1,0 +1,71 @@
+{
+  "base": "C:\\Users\\IZWAN ASAD\\OneDrive\\Desktop\\fyp-hq\\code\\corpus\\data\\base\\edgar_EX10_21344_000162828026050503_a20260703ex-102.pdf",
+  "file_type": "pdf",
+  "accepted": [
+    "corpus\\data\\run1\\poisoned\\edgar_EX10_21344_000162828026050503_a20260703ex-102__V1_O1.pdf",
+    "corpus\\data\\run1\\poisoned\\edgar_EX10_21344_000162828026050503_a20260703ex-102__V1_O2.pdf",
+    "corpus\\data\\run1\\poisoned\\edgar_EX10_21344_000162828026050503_a20260703ex-102__V1_O3.pdf",
+    "corpus\\data\\run1\\poisoned\\edgar_EX10_21344_000162828026050503_a20260703ex-102__V2_O1.pdf",
+    "corpus\\data\\run1\\poisoned\\edgar_EX10_21344_000162828026050503_a20260703ex-102__V2_O2.pdf",
+    "corpus\\data\\run1\\poisoned\\edgar_EX10_21344_000162828026050503_a20260703ex-102__V2_O3.pdf",
+    "corpus\\data\\run1\\poisoned\\edgar_EX10_21344_000162828026050503_a20260703ex-102__V3_O1.pdf",
+    "corpus\\data\\run1\\poisoned\\edgar_EX10_21344_000162828026050503_a20260703ex-102__V3_O2.pdf",
+    "corpus\\data\\run1\\poisoned\\edgar_EX10_21344_000162828026050503_a20260703ex-102__V3_O3.pdf"
+  ],
+  "rejected": [
+    {
+      "variant_id": "edgar_EX10_21344_000162828026050503_a20260703ex-102__V7_O1",
+      "vector": "V7",
+      "objective": "O1",
+      "reason": "R1 failed: injected payload not recoverable by extraction",
+      "r1_pass": false,
+      "r2_pass": false,
+      "path": "corpus\\data\\run1\\rejected\\edgar_EX10_21344_000162828026050503_a20260703ex-102__V7_O1.pdf"
+    },
+    {
+      "variant_id": "edgar_EX10_21344_000162828026050503_a20260703ex-102__V7_O2",
+      "vector": "V7",
+      "objective": "O2",
+      "reason": "R1 failed: injected payload not recoverable by extraction",
+      "r1_pass": false,
+      "r2_pass": false,
+      "path": "corpus\\data\\run1\\rejected\\edgar_EX10_21344_000162828026050503_a20260703ex-102__V7_O2.pdf"
+    },
+    {
+      "variant_id": "edgar_EX10_21344_000162828026050503_a20260703ex-102__V7_O3",
+      "vector": "V7",
+      "objective": "O3",
+      "reason": "R1 failed: injected payload not recoverable by extraction",
+      "r1_pass": false,
+      "r2_pass": false,
+      "path": "corpus\\data\\run1\\rejected\\edgar_EX10_21344_000162828026050503_a20260703ex-102__V7_O3.pdf"
+    },
+    {
+      "variant_id": "edgar_EX10_21344_000162828026050503_a20260703ex-102__V8_O1",
+      "vector": "V8",
+      "objective": "O1",
+      "reason": "R1 failed: injected payload not recoverable by extraction",
+      "r1_pass": false,
+      "r2_pass": false,
+      "path": "corpus\\data\\run1\\rejected\\edgar_EX10_21344_000162828026050503_a20260703ex-102__V8_O1.pdf"
+    },
+    {
+      "variant_id": "edgar_EX10_21344_000162828026050503_a20260703ex-102__V8_O2",
+      "vector": "V8",
+      "objective": "O2",
+      "reason": "R1 failed: injected payload not recoverable by extraction",
+      "r1_pass": false,
+      "r2_pass": false,
+      "path": "corpus\\data\\run1\\rejected\\edgar_EX10_21344_000162828026050503_a20260703ex-102__V8_O2.pdf"
+    },
+    {
+      "variant_id": "edgar_EX10_21344_000162828026050503_a20260703ex-102__V8_O3",
+      "vector": "V8",
+      "objective": "O3",
+      "reason": "R1 failed: injected payload not recoverable by extraction",
+      "r1_pass": false,
+      "r2_pass": false,
+      "path": "corpus\\data\\run1\\rejected\\edgar_EX10_21344_000162828026050503_a20260703ex-102__V8_O3.pdf"
+    }
+  ]
+}

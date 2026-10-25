@@ -1,0 +1,71 @@
+{
+  "base": "C:\\Users\\IZWAN ASAD\\OneDrive\\Desktop\\fyp-hq\\code\\corpus\\data\\base\\cuad_RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement.pdf",
+  "file_type": "pdf",
+  "accepted": [
+    "corpus\\data\\run1\\poisoned\\cuad_RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement__V1_O1.pdf",
+    "corpus\\data\\run1\\poisoned\\cuad_RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement__V1_O2.pdf",
+    "corpus\\data\\run1\\poisoned\\cuad_RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement__V1_O3.pdf",
+    "corpus\\data\\run1\\poisoned\\cuad_RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement__V2_O1.pdf",
+    "corpus\\data\\run1\\poisoned\\cuad_RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement__V2_O2.pdf",
+    "corpus\\data\\run1\\poisoned\\cuad_RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement__V2_O3.pdf",
+    "corpus\\data\\run1\\poisoned\\cuad_RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement__V3_O1.pdf",
+    "corpus\\data\\run1\\poisoned\\cuad_RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement__V3_O2.pdf",
+    "corpus\\data\\run1\\poisoned\\cuad_RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement__V3_O3.pdf"
+  ],
+  "rejected": [
+    {
+      "variant_id": "cuad_RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement__V7_O1",
+      "vector": "V7",
+      "objective": "O1",
+      "reason": "R1 failed: injected payload not recoverable by extraction",
+      "r1_pass": false,
+      "r2_pass": false,
+      "path": "corpus\\data\\run1\\rejected\\cuad_RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement__V7_O1.pdf"
+    },
+    {
+      "variant_id": "cuad_RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement__V7_O2",
+      "vector": "V7",
+      "objective": "O2",
+      "reason": "R1 failed: injected payload not recoverable by extraction",
+      "r1_pass": false,
+      "r2_pass": false,
+      "path": "corpus\\data\\run1\\rejected\\cuad_RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement__V7_O2.pdf"
+    },
+    {
+      "variant_id": "cuad_RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement__V7_O3",
+      "vector": "V7",
+      "objective": "O3",
+      "reason": "R1 failed: injected payload not recoverable by extraction",
+      "r1_pass": false,
+      "r2_pass": false,
+      "path": "corpus\\data\\run1\\rejected\\cuad_RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement__V7_O3.pdf"
+    },
+    {
+      "variant_id": "cuad_RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement__V8_O1",
+      "vector": "V8",
+      "objective": "O1",
+      "reason": "R1 failed: injected payload not recoverable by extraction",
+      "r1_pass": false,
+      "r2_pass": false,
+      "path": "corpus\\data\\run1\\rejected\\cuad_RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement__V8_O1.pdf"
+    },
+    {
+      "variant_id": "cuad_RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement__V8_O2",
+      "vector": "V8",
+      "objective": "O2",
+      "reason": "R1 failed: injected payload not recoverable by extraction",
+      "r1_pass": false,
+      "r2_pass": false,
+      "path": "corpus\\data\\run1\\rejected\\cuad_RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement__V8_O2.pdf"
+    },
+    {
+      "variant_id": "cuad_RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement__V8_O3",
+      "vector": "V8",
+      "objective": "O3",
+      "reason": "R1 failed: injected payload not recoverable by extraction",
+      "r1_pass": false,
+      "r2_pass": false,
+      "path": "corpus\\data\\run1\\rejected\\cuad_RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement__V8_O3.pdf"
+    }
+  ]
+}

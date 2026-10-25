@@ -1,0 +1,22 @@
+{
+  "base": "C:\\Users\\IZWAN ASAD\\OneDrive\\Desktop\\fyp-hq\\code\\corpus\\data\\base\\edgar_10Q_104169_000010416926000154.pdf",
+  "file_type": "pdf",
+  "accepted": [
+    "corpus\\data\\run1\\poisoned\\edgar_10Q_104169_000010416926000154__V1_O1.pdf",
+    "corpus\\data\\run1\\poisoned\\edgar_10Q_104169_000010416926000154__V1_O2.pdf",
+    "corpus\\data\\run1\\poisoned\\edgar_10Q_104169_000010416926000154__V1_O3.pdf",
+    "corpus\\data\\run1\\poisoned\\edgar_10Q_104169_000010416926000154__V2_O1.pdf",
+    "corpus\\data\\run1\\poisoned\\edgar_10Q_104169_000010416926000154__V2_O2.pdf",
+    "corpus\\data\\run1\\poisoned\\edgar_10Q_104169_000010416926000154__V2_O3.pdf",
+    "corpus\\data\\run1\\poisoned\\edgar_10Q_104169_000010416926000154__V3_O1.pdf",
+    "corpus\\data\\run1\\poisoned\\edgar_10Q_104169_000010416926000154__V3_O2.pdf",
+    "corpus\\data\\run1\\poisoned\\edgar_10Q_104169_000010416926000154__V3_O3.pdf",
+    "corpus\\data\\run1\\poisoned\\edgar_10Q_104169_000010416926000154__V7_O1.pdf",
+    "corpus\\data\\run1\\poisoned\\edgar_10Q_104169_000010416926000154__V7_O2.pdf",
+    "corpus\\data\\run1\\poisoned\\edgar_10Q_104169_000010416926000154__V7_O3.pdf",
+    "corpus\\data\\run1\\poisoned\\edgar_10Q_104169_000010416926000154__V8_O1.pdf",
+    "corpus\\data\\run1\\poisoned\\edgar_10Q_104169_000010416926000154__V8_O2.pdf",
+    "corpus\\data\\run1\\poisoned\\edgar_10Q_104169_000010416926000154__V8_O3.pdf"
+  ],
+  "rejected": []
+}

@@ -17,16 +17,32 @@ from .fonts import unicode_font_path
 
 PDF_VECTORS = ("V1", "V2", "V3", "V7", "V8")
 
-_UNICODE_FONT_ALIAS = "injfont"
-
-
 def _insert_unicode_text(page, point, text, fontsize, color):
-    """Insert text that may contain non-Latin code points, embedding a font."""
+    """Insert text that may contain non-Latin code points, embedding a font.
+
+    Uses PyMuPDF's TextWriter, which subsets and embeds the font reliably across
+    versions/platforms (the older insert_font+insert_text path produced text that
+    some PyMuPDF builds could not extract back on real PDFs). Any code point the
+    font cannot render (e.g. a zero-width space) is skipped for drawing but the
+    rest — including the plain marker — is still written and recoverable.
+    """
     font_path = unicode_font_path()
     if font_path is None:
         raise RuntimeError("no Unicode-capable system font found for PDF encoding vectors")
-    page.insert_font(fontname=_UNICODE_FONT_ALIAS, fontfile=font_path)
-    page.insert_text(point, text, fontsize=fontsize, color=color, fontname=_UNICODE_FONT_ALIAS)
+    font = pymupdf.Font(fontfile=font_path)
+    tw = pymupdf.TextWriter(page.rect, color=color)
+    try:
+        tw.append(point, text, font=font, fontsize=fontsize)
+    except Exception:
+        # if a specific glyph is unmappable, write glyph-by-glyph, skipping bad ones
+        x, y = point
+        for ch in text:
+            try:
+                tw.append((x, y), ch, font=font, fontsize=fontsize)
+                x += font.char_lengths(ch, fontsize)[0] if ch.strip() else fontsize * 0.3
+            except Exception:
+                continue
+    tw.write_text(page)
 
 
 def inject_pdf(base: Path, vector: str, payload: str, out: Path) -> str:

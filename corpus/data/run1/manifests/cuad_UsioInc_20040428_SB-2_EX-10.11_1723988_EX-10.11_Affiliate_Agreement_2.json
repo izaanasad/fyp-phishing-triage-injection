@@ -1,0 +1,71 @@
+{
+  "base": "C:\\Users\\IZWAN ASAD\\OneDrive\\Desktop\\fyp-hq\\code\\corpus\\data\\base\\cuad_UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate_Agreement_2.pdf",
+  "file_type": "pdf",
+  "accepted": [
+    "corpus\\data\\run1\\poisoned\\cuad_UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate_Agreement_2__V1_O1.pdf",
+    "corpus\\data\\run1\\poisoned\\cuad_UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate_Agreement_2__V1_O2.pdf",
+    "corpus\\data\\run1\\poisoned\\cuad_UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate_Agreement_2__V1_O3.pdf",
+    "corpus\\data\\run1\\poisoned\\cuad_UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate_Agreement_2__V2_O1.pdf",
+    "corpus\\data\\run1\\poisoned\\cuad_UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate_Agreement_2__V2_O2.pdf",
+    "corpus\\data\\run1\\poisoned\\cuad_UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate_Agreement_2__V2_O3.pdf",
+    "corpus\\data\\run1\\poisoned\\cuad_UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate_Agreement_2__V3_O1.pdf",
+    "corpus\\data\\run1\\poisoned\\cuad_UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate_Agreement_2__V3_O2.pdf",
+    "corpus\\data\\run1\\poisoned\\cuad_UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate_Agreement_2__V3_O3.pdf"
+  ],
+  "rejected": [
+    {
+      "variant_id": "cuad_UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate_Agreement_2__V7_O1",
+      "vector": "V7",
+      "objective": "O1",
+      "reason": "R1 failed: injected payload not recoverable by extraction",
+      "r1_pass": false,
+      "r2_pass": false,
+      "path": "corpus\\data\\run1\\rejected\\cuad_UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate_Agreement_2__V7_O1.pdf"
+    },
+    {
+      "variant_id": "cuad_UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate_Agreement_2__V7_O2",
+      "vector": "V7",
+      "objective": "O2",
+      "reason": "R1 failed: injected payload not recoverable by extraction",
+      "r1_pass": false,
+      "r2_pass": false,
+      "path": "corpus\\data\\run1\\rejected\\cuad_UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate_Agreement_2__V7_O2.pdf"
+    },
+    {
+      "variant_id": "cuad_UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate_Agreement_2__V7_O3",
+      "vector": "V7",
+      "objective": "O3",
+      "reason": "R1 failed: injected payload not recoverable by extraction",
+      "r1_pass": false,
+      "r2_pass": false,
+      "path": "corpus\\data\\run1\\rejected\\cuad_UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate_Agreement_2__V7_O3.pdf"
+    },
+    {
+      "variant_id": "cuad_UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate_Agreement_2__V8_O1",
+      "vector": "V8",
+      "objective": "O1",
+      "reason": "R1 failed: injected payload not recoverable by extraction",
+      "r1_pass": false,
+      "r2_pass": false,
+      "path": "corpus\\data\\run1\\rejected\\cuad_UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate_Agreement_2__V8_O1.pdf"
+    },
+    {
+      "variant_id": "cuad_UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate_Agreement_2__V8_O2",
+      "vector": "V8",
+      "objective": "O2",
+      "reason": "R1 failed: injected payload not recoverable by extraction",
+      "r1_pass": false,
+      "r2_pass": false,
+      "path": "corpus\\data\\run1\\rejected\\cuad_UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate_Agreement_2__V8_O2.pdf"
+    },
+    {
+      "variant_id": "cuad_UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate_Agreement_2__V8_O3",
+      "vector": "V8",
+      "objective": "O3",
+      "reason": "R1 failed: injected payload not recoverable by extraction",
+      "r1_pass": false,
+      "r2_pass": false,
+      "path": "corpus\\data\\run1\\rejected\\cuad_UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate_Agreement_2__V8_O3.pdf"
+    }
+  ]
+}
