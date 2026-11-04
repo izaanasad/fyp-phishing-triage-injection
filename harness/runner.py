@@ -74,12 +74,44 @@ def _verdict_dict(v) -> dict[str, Any]:
 def run(corpus_dir: str | Path, out_dir: str | Path, agent,
         sample: Optional[int] = 60, runs: int = 1, seed: int = 0,
         objectives: Optional[set] = None, vectors: Optional[set] = None,
-        labels: Optional[set] = None, progress: Callable[[str], None] = print) -> dict:
-    """Run the harness and return the metrics dict. Resumable via results.jsonl."""
+        labels: Optional[set] = None, gateway=None,
+        progress: Callable[[str], None] = print) -> dict:
+    """Run the harness and return the metrics dict. Resumable via results.jsonl.
+
+    If `gateway` is given (a gateway.Gateway), every document is sanitised by it
+    before the agent sees it — this is the defended (Pass 2) run. The agent, its
+    prompt, the corpus and the metrics are otherwise identical to the undefended
+    run, so the difference in attack-success rate is attributable to the gateway.
+    Use a DIFFERENT --out directory for the defended run so its results.jsonl is
+    kept separate from the baseline.
+    """
     corpus_dir = Path(corpus_dir)
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
     results_path = out / "results.jsonl"
+
+    # Guard: a results folder is either a baseline run or a defended run, never
+    # both. The resume key does not encode gateway state, so mixing them would
+    # silently reuse the wrong results. Refuse, and say what to do.
+    mode = "gateway-on" if gateway is not None else "gateway-off"
+    mode_file = out / "run_mode.txt"
+    if mode_file.exists():
+        prev = mode_file.read_text(encoding="utf-8").strip()
+        if prev != mode:
+            raise SystemExit(
+                f"[harness] {out} already holds {prev!r} results, but this run is {mode!r}.\n"
+                f"          Baseline and defended runs must not share a folder "
+                f"(the resume log would reuse the wrong results).\n"
+                f"          Use a different --out (e.g. a fresh folder) for this run.")
+    else:
+        mode_file.write_text(mode, encoding="utf-8")
+
+    def triage_doc(path):
+        """Baseline: agent reads the raw extraction. Defended: agent reads only
+        the gateway's sanitised text."""
+        if gateway is None:
+            return agent.triage_file(path)
+        return agent.triage_text(gateway.sanitise_to_text(path))
 
     poisoned, clean_gts = load_corpus(corpus_dir)
     chosen = sample_variants(poisoned, sample, seed, objectives, vectors, labels)
@@ -112,7 +144,7 @@ def run(corpus_dir: str | Path, out_dir: str | Path, agent,
         if key in done:
             continue
         clean_path = corpus_dir / "clean" / base
-        v = agent.triage_file(clean_path)
+        v = triage_doc(clean_path)
         meta = {"base": base, "correct_verdict": clean_gts.get(base, {}).get("correct_verdict")}
         record(key, "clean", meta, v)
         progress(f"  clean  {base}: {v.classification}{' (denial)' if v.denial else ''}")
@@ -123,7 +155,7 @@ def run(corpus_dir: str | Path, out_dir: str | Path, agent,
             key = f"pois:{g['variant_id']}:{run_idx}"
             if key in done:
                 continue
-            v = agent.triage_file(g["variant_path"])
+            v = triage_doc(g["variant_path"])
             meta = {"variant_id": g["variant_id"], "base": Path(g["base_path"]).name,
                     "vector": g["vector"], "objective": g["objective"], "run_idx": run_idx}
             record(key, "pois", meta, v)

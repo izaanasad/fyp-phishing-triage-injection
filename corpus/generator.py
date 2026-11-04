@@ -129,6 +129,17 @@ def generate(base_path: str | Path, out_dir: str | Path,
     file_type = base_rec.file_type
     target_iocs = payloads.find_iocs(base_rec.visible_text)
 
+    # intrinsic label of the base document: what a faithful agent should output
+    # with no injection. Contracts/filings default benign; phishing lures are
+    # marked malicious in base_labels.json so O1 (verdict flip) is measurable.
+    intrinsic = "benign"
+    labels_path = base.parent / "base_labels.json"
+    if labels_path.exists():
+        try:
+            intrinsic = json.loads(labels_path.read_text(encoding="utf-8")).get(base.name, "benign")
+        except Exception:  # noqa: BLE001
+            intrinsic = "benign"
+
     # clean baseline (ground truth: benign)
     clean_path = out / "clean" / base.name
     shutil.copy2(base, clean_path)
@@ -139,7 +150,7 @@ def generate(base_path: str | Path, out_dir: str | Path,
         "file_type": file_type,
         "vector": None,
         "objective": None,
-        "correct_verdict": payloads.CORRECT_VERDICT_CLEAN,
+        "correct_verdict": intrinsic,
         "target_iocs": target_iocs,
     }
     (clean_path.with_suffix(clean_path.suffix + ".gt.json")).write_text(
@@ -189,7 +200,7 @@ def generate(base_path: str | Path, out_dir: str | Path,
                 vector=vector,
                 objective=objective,
                 concealment_class=concealment,
-                correct_verdict=payloads.CORRECT_VERDICT_POISONED,
+                correct_verdict=intrinsic,
                 injected_text=injected,
                 injected_text_normalized=payloads.normalize(injected),
                 target_iocs=target_iocs,

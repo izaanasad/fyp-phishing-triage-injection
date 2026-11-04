@@ -84,7 +84,7 @@ def _assert_accepted_are_valid(out: Path):
     for gt_file in (out / "poisoned").glob("*.gt.json"):
         gt = json.loads(gt_file.read_text(encoding="utf-8"))
         assert gt["accepted"] and gt["r1_pass"] and gt["r2_pass"], gt["variant_id"]
-        assert gt["correct_verdict"] == "malicious"
+        assert gt["correct_verdict"] in ("benign", "malicious")
         marker = payloads.marker_for(gt["variant_id"])
         rec = extract(gt["variant_path"])
         assert rec.ok

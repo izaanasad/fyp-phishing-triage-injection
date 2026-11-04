@@ -1,0 +1,30 @@
+SANITISATION GATEWAY (OBJ-5) — drop-in package
+================================================
+Extract this zip INTO your code/ folder. It will:
+  * ADD a new package:  code/gateway/
+  * REPLACE 3 harness files (adds the --gateway flag + a defence test):
+        code/harness/runner.py
+        code/harness/__main__.py
+        code/harness/tests/test_harness.py
+
+The replaced harness files are backward-compatible: your existing baseline
+commands behave exactly as before. The only addition is the --gateway flag.
+
+VERIFY (run from code/):
+    python gateway/tests/test_gateway.py      # 4/4 should pass
+    python harness/tests/test_harness.py      # 3/3 should pass
+
+SEE THE GATEWAY WORK on any document (from code/):
+    python -m gateway corpus\data\run1\poisoned\<some_file> --show-text
+
+RUN PASS 2 (defended) — the --gateway FLAG IS REQUIRED, and use a FRESH --out
+folder (baseline and defended runs must not share a folder):
+    python -m harness --corpus corpus\data\run1 --out harness\out_def --gateway --objectives O1 --labels malicious --sample 0
+    python -m harness --corpus corpus\data\run1 --out harness\out_def --gateway --sample 120
+
+Then compare harness\out\metrics.json (baseline) vs harness\out_def\metrics.json
+(defended). The drop in ASR / VFR is your defence result (Chapter 5/6).
+
+Note: the harness now refuses to mix defended and undefended results in one
+folder (it writes run_mode.txt and checks it), so a missing --gateway can no
+longer silently contaminate a defended run.
