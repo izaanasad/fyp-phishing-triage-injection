@@ -1,0 +1,22 @@
+{
+  "base": "C:\\Users\\IZWAN ASAD\\OneDrive\\Desktop\\fyp-hq\\code\\corpus\\data\\base\\lure_11_Microsoft_365_Your_account_will_be_suspe.docx",
+  "file_type": "docx",
+  "accepted": [
+    "corpus\\data\\run1\\poisoned\\lure_11_Microsoft_365_Your_account_will_be_suspe__V4_O1.docx",
+    "corpus\\data\\run1\\poisoned\\lure_11_Microsoft_365_Your_account_will_be_suspe__V4_O2.docx",
+    "corpus\\data\\run1\\poisoned\\lure_11_Microsoft_365_Your_account_will_be_suspe__V4_O3.docx",
+    "corpus\\data\\run1\\poisoned\\lure_11_Microsoft_365_Your_account_will_be_suspe__V5_O1.docx",
+    "corpus\\data\\run1\\poisoned\\lure_11_Microsoft_365_Your_account_will_be_suspe__V5_O2.docx",
+    "corpus\\data\\run1\\poisoned\\lure_11_Microsoft_365_Your_account_will_be_suspe__V5_O3.docx",
+    "corpus\\data\\run1\\poisoned\\lure_11_Microsoft_365_Your_account_will_be_suspe__V6_O1.docx",
+    "corpus\\data\\run1\\poisoned\\lure_11_Microsoft_365_Your_account_will_be_suspe__V6_O2.docx",
+    "corpus\\data\\run1\\poisoned\\lure_11_Microsoft_365_Your_account_will_be_suspe__V6_O3.docx",
+    "corpus\\data\\run1\\poisoned\\lure_11_Microsoft_365_Your_account_will_be_suspe__V7_O1.docx",
+    "corpus\\data\\run1\\poisoned\\lure_11_Microsoft_365_Your_account_will_be_suspe__V7_O2.docx",
+    "corpus\\data\\run1\\poisoned\\lure_11_Microsoft_365_Your_account_will_be_suspe__V7_O3.docx",
+    "corpus\\data\\run1\\poisoned\\lure_11_Microsoft_365_Your_account_will_be_suspe__V8_O1.docx",
+    "corpus\\data\\run1\\poisoned\\lure_11_Microsoft_365_Your_account_will_be_suspe__V8_O2.docx",
+    "corpus\\data\\run1\\poisoned\\lure_11_Microsoft_365_Your_account_will_be_suspe__V8_O3.docx"
+  ],
+  "rejected": []
+}

@@ -1,0 +1,22 @@
+{
+  "base": "C:\\Users\\IZWAN ASAD\\OneDrive\\Desktop\\fyp-hq\\code\\corpus\\data\\base\\lure_09_Refund_Pending_Confirm_your_bank_account.docx",
+  "file_type": "docx",
+  "accepted": [
+    "corpus\\data\\run1\\poisoned\\lure_09_Refund_Pending_Confirm_your_bank_account__V4_O1.docx",
+    "corpus\\data\\run1\\poisoned\\lure_09_Refund_Pending_Confirm_your_bank_account__V4_O2.docx",
+    "corpus\\data\\run1\\poisoned\\lure_09_Refund_Pending_Confirm_your_bank_account__V4_O3.docx",
+    "corpus\\data\\run1\\poisoned\\lure_09_Refund_Pending_Confirm_your_bank_account__V5_O1.docx",
+    "corpus\\data\\run1\\poisoned\\lure_09_Refund_Pending_Confirm_your_bank_account__V5_O2.docx",
+    "corpus\\data\\run1\\poisoned\\lure_09_Refund_Pending_Confirm_your_bank_account__V5_O3.docx",
+    "corpus\\data\\run1\\poisoned\\lure_09_Refund_Pending_Confirm_your_bank_account__V6_O1.docx",
+    "corpus\\data\\run1\\poisoned\\lure_09_Refund_Pending_Confirm_your_bank_account__V6_O2.docx",
+    "corpus\\data\\run1\\poisoned\\lure_09_Refund_Pending_Confirm_your_bank_account__V6_O3.docx",
+    "corpus\\data\\run1\\poisoned\\lure_09_Refund_Pending_Confirm_your_bank_account__V7_O1.docx",
+    "corpus\\data\\run1\\poisoned\\lure_09_Refund_Pending_Confirm_your_bank_account__V7_O2.docx",
+    "corpus\\data\\run1\\poisoned\\lure_09_Refund_Pending_Confirm_your_bank_account__V7_O3.docx",
+    "corpus\\data\\run1\\poisoned\\lure_09_Refund_Pending_Confirm_your_bank_account__V8_O1.docx",
+    "corpus\\data\\run1\\poisoned\\lure_09_Refund_Pending_Confirm_your_bank_account__V8_O2.docx",
+    "corpus\\data\\run1\\poisoned\\lure_09_Refund_Pending_Confirm_your_bank_account__V8_O3.docx"
+  ],
+  "rejected": []
+}

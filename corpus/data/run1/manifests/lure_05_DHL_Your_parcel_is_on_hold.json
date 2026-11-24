@@ -1,0 +1,22 @@
+{
+  "base": "C:\\Users\\IZWAN ASAD\\OneDrive\\Desktop\\fyp-hq\\code\\corpus\\data\\base\\lure_05_DHL_Your_parcel_is_on_hold.docx",
+  "file_type": "docx",
+  "accepted": [
+    "corpus\\data\\run1\\poisoned\\lure_05_DHL_Your_parcel_is_on_hold__V4_O1.docx",
+    "corpus\\data\\run1\\poisoned\\lure_05_DHL_Your_parcel_is_on_hold__V4_O2.docx",
+    "corpus\\data\\run1\\poisoned\\lure_05_DHL_Your_parcel_is_on_hold__V4_O3.docx",
+    "corpus\\data\\run1\\poisoned\\lure_05_DHL_Your_parcel_is_on_hold__V5_O1.docx",
+    "corpus\\data\\run1\\poisoned\\lure_05_DHL_Your_parcel_is_on_hold__V5_O2.docx",
+    "corpus\\data\\run1\\poisoned\\lure_05_DHL_Your_parcel_is_on_hold__V5_O3.docx",
+    "corpus\\data\\run1\\poisoned\\lure_05_DHL_Your_parcel_is_on_hold__V6_O1.docx",
+    "corpus\\data\\run1\\poisoned\\lure_05_DHL_Your_parcel_is_on_hold__V6_O2.docx",
+    "corpus\\data\\run1\\poisoned\\lure_05_DHL_Your_parcel_is_on_hold__V6_O3.docx",
+    "corpus\\data\\run1\\poisoned\\lure_05_DHL_Your_parcel_is_on_hold__V7_O1.docx",
+    "corpus\\data\\run1\\poisoned\\lure_05_DHL_Your_parcel_is_on_hold__V7_O2.docx",
+    "corpus\\data\\run1\\poisoned\\lure_05_DHL_Your_parcel_is_on_hold__V7_O3.docx",
+    "corpus\\data\\run1\\poisoned\\lure_05_DHL_Your_parcel_is_on_hold__V8_O1.docx",
+    "corpus\\data\\run1\\poisoned\\lure_05_DHL_Your_parcel_is_on_hold__V8_O2.docx",
+    "corpus\\data\\run1\\poisoned\\lure_05_DHL_Your_parcel_is_on_hold__V8_O3.docx"
+  ],
+  "rejected": []
+}
